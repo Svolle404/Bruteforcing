@@ -1,7 +1,7 @@
 class encryption {
-  String encIn = "De fleste var bygget til at skulle fungere som grav for de daværende faraoer eller deres ægtefæller under det gamle rige og det mellemste rige.";
+  String encIn = "";
   String encOut = "";
-  String encKey = "Quy";
+  String encKey = "";
   int x = 0;
 
   void run() {

@@ -1,5 +1,5 @@
 class bruteforcing {
-  String bruIn = "&yjVCå KåBMy!fz4æBUKj'åGBuOBJF0CGUfA0EBUIåBJJÅfB!uQBzJ!føUføQMV!yITyjVuMQFå!fåØCå!føUIå fVWKåVRGØyMBLITyMBxå'fBQDGUfMYæåBFBBxå'fHUCGUDN'yj!åBUa";
+  String bruIn = "";
   String bruOut = "";
   String bruGuess = "";
   int x = 0;
