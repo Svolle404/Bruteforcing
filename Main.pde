@@ -9,7 +9,7 @@ void setup() {
   decryption = new decryption();
   bruteforcing = new bruteforcing();
 
-  // encryption.run();
+  //encryption.run();
   // decryption.run();
   bruteforcing.run(3);
 

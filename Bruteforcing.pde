@@ -1,12 +1,12 @@
 class bruteforcing {
-  String bruIn = "";
+  String bruIn = "qk9Oj4&47!xV!xV!tV4ga'41!y(!jV)u&Oy(.rV;k((Bc&ke!yQOL)!x4Oue;46hxV;kgOt45s4(kV.zV oa;kV;kaOx8'z8'kV6E64kQ";
   String bruOut = "";
   String bruGuess = "";
   int x = 0;
   int posKeys = 0;
 
   int e = 0;
-  final int eFreq = 12;
+  final int eFreq = 15;
 
   int r = 0;
   final int rFreq = 5;
@@ -17,6 +17,8 @@ class bruteforcing {
   String[] outs = new String[0];
   String[] mostLikely = new String[0];
   String mostLikelyKey = "";
+
+  IntDict charInKey = new IntDict();
 
   void run(int keyLength) {
     if (keyLength == 4) {
@@ -214,10 +216,11 @@ class bruteforcing {
         mostLikely[mostLikely.length-1] = str(outs[i].charAt(5+j));
       }
       mostLikely = sort(mostLikely);
-      for (int i = 0; i < mostLikely.length; i++) {
-        println(mostLikely[i]);
-      }
-      println("");
+      for (String s : mostLikely) charInKey.increment(s);
+      charInKey.sortValuesReverse();
+      String[] chars = charInKey.keyArray();
+      mostLikelyKey += chars[0];
+      charInKey.clear();
     }
 
     saveStrings("outs.txt", outs);
@@ -233,5 +236,7 @@ class bruteforcing {
       println("> "+outs[i]);
       println("");
     }
+    println("Most probable key: "+mostLikelyKey);
+    println("");
   }
 }

@@ -1,7 +1,7 @@
 class encryption {
-  String encIn = "";
+  String encIn = "Hej det her er en lang besked som skal dekrypteres. Flere ord gør det nemmere at finde den rigtige nøgle.";
   String encOut = "";
-  String encKey = "";
+  String encKey = ".g0";
   int x = 0;
 
   void run() {
